@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-/* Style global */
+/* Global */
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #f4f4f4;
@@ -13,43 +13,69 @@ body {
   line-height: 1.6;
 }
 
-/* Conteneur principal */
-main {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-
 /* Header */
 header {
   background-color: #222;
   color: #fff;
   text-align: center;
-  padding: 40px 20px;
+  padding: 50px 20px;
 }
 
 header h1 {
-  font-size: 2.5rem;
+  font-size: 2.6rem;
   margin-bottom: 10px;
 }
 
 header p {
   font-size: 1.1rem;
-  opacity: 0.8;
+  opacity: 0.85;
+}
+
+header .intro {
+  margin-top: 15px;
+  font-size: 1rem;
+}
+
+/* Bouton Discord */
+header .btn-contact {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 28px;
+  background-color: #5865F2;
+  color: #ffffff;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+header .btn-contact:hover {
+  background-color: #4752c4;
+}
+
+/* Main */
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
 /* Sections */
 section {
   background-color: #fff;
-  margin-bottom: 30px;
   padding: 25px;
-  border-radius: 6px;
+  border-radius: 8px;
+  margin-bottom: 30px;
 }
 
 section h2 {
+  font-size: 1.5rem;
   margin-bottom: 15px;
-  font-size: 1.4rem;
   color: #222;
+}
+
+#about p {
+  margin-bottom: 10px;
 }
 
 /* Projets */
@@ -63,47 +89,10 @@ section h2 {
   border-left: 4px solid #222;
 }
 
-/* Liens */
-a {
-  color: #222;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
 /* Footer */
 footer {
   text-align: center;
   padding: 20px;
   font-size: 0.9rem;
   color: #666;
-  }
-
-  #about p {
-  line-height: 1.8;
-  font-size: 1.05rem;
-  color: #333;
-}
-
-.btn-contact {
-  display: inline-block;
-  margin-top: 25px;
-  padding: 12px 24px;
-  background-color: #5865F2;
-  color: #fff;              /* 🔴 IMPORTANT */
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 1rem;
-}
-
-.btn-contact:hover {
-  background-color: #4752c4;
-}
-
-header .btn-contact {
-  color: #fff;
 }
