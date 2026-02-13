@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --blue: #4f7df3;
+  --violet: #7b4fe9;
+  --dark-bg: #0f172a;
+  --text-main: #ffffff;
+  --text-muted: #9ca3af;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to bottom, #111827, #0f172a);
+  color: white;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* ================= HEADER ================= */
+
+header {
+  background: linear-gradient(90deg, #4f7df3, #7b4fe9);
+  padding: 1.5rem 3rem;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* clé du problème */
+}
+
+/* Logo à gauche */
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: white;
+}
+
+/* Menu à droite */
+nav {
+  display: flex;
+  gap: 1.8rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  position: relative;
+}
+
+/* Hover clean */
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.2s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ================= MAIN ================= */
+
+main {
+  flex: 1; /* prend tout l’espace disponible */
+  text-align: center;
+  margin-top: 6rem;
+  padding: 0 1.5rem;
+}
+
+main h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+main p {
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  font-size: 1rem;
+}
+
+/* ================= BUTTON ================= */
+
+.btn {
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  background: linear-gradient(135deg, var(--blue), var(--violet));
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(123, 79, 233, 0.4);
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+/* =========================
+   TABLETTE (≤ 1024px)
+========================= */
+@media (max-width: 1024px) {
+
+  header {
+    padding: 1.2rem 2rem;
+  }
+
+  nav {
+    gap: 1.2rem;
+  }
+
+  main h1 {
+    font-size: 1.7rem;
+  }
+
+  main p {
+    font-size: 0.95rem;
+  }
+}
+
+/* =========================
+   MOBILE (≤ 767px)
+========================= */
+@media (max-width: 767px) {
+
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  nav a {
+    font-size: 1rem;
+  }
+
+  main {
+    margin-top: 4rem;
+    padding: 0 1rem;
+  }
+
+  main h1 {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
