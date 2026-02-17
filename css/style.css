@@ -1,12 +1,5 @@
+/* ===================== RESET ===================== */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
-:root {
-  --blue: #4f7df3;
-  --violet: #7b4fe9;
-  --dark-bg: #0f172a;
-  --text-main: #ffffff;
-  --text-muted: #9ca3af;
-}
 
 * {
   margin: 0;
@@ -14,51 +7,64 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Inter', sans-serif;
-  background: linear-gradient(to bottom, #111827, #0f172a);
-  color: white;
-  min-height: 100vh;
-
-  display: flex;
-  flex-direction: column;
+/* ===================== VARIABLES ===================== */
+:root {
+  --blue: #4f7df3;
+  --violet: #7b4fe9;
+  --bg-dark: #0f172a;
+  --bg-dark-2: #111827;
+  --text-main: #ffffff;
+  --text-muted: #9ca3af;
 }
 
-/* ================= HEADER ================= */
+/* ===================== BODY ===================== */
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to bottom, var(--bg-dark-2), var(--bg-dark));
+  color: var(--text-main);
+  min-height: 100vh;
+}
 
+/* ===================== CONTAINER CENTRAL ===================== */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ===================== HEADER ===================== */
 header {
-  background: linear-gradient(90deg, #4f7df3, #7b4fe9);
-  padding: 1.5rem 3rem;
+  background: linear-gradient(90deg, var(--blue), var(--violet));
+  padding: 1.5rem 0;
 }
 
 .header-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: space-between; /* clé du problème */
 }
 
-/* Logo à gauche */
 .logo {
   font-size: 1.6rem;
   font-weight: 700;
-  color: white;
 }
 
-/* Menu à droite */
 nav {
   display: flex;
-  gap: 1.8rem;
+  gap: 1.6rem;
 }
 
 nav a {
   color: white;
   text-decoration: none;
   font-size: 0.95rem;
-  font-weight: 500;
   position: relative;
 }
 
-/* Hover clean */
 nav a::after {
   content: "";
   position: absolute;
@@ -66,7 +72,7 @@ nav a::after {
   bottom: -6px;
   width: 0;
   height: 2px;
-  background-color: white;
+  background: white;
   transition: width 0.2s ease;
 }
 
@@ -74,82 +80,137 @@ nav a:hover::after {
   width: 100%;
 }
 
-/* ================= MAIN ================= */
-
-main {
-  flex: 1; /* prend tout l’espace disponible */
-  text-align: center;
-  margin-top: 6rem;
-  padding: 0 1.5rem;
-}
-
-main h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-}
-
-main p {
-  color: var(--text-muted);
-  max-width: 600px;
-  margin: 0 auto 3rem;
-  font-size: 1rem;
-}
-
-/* ================= BUTTON ================= */
-
+/* ===================== BUTTON ===================== */
 .btn {
   display: inline-block;
   padding: 0.9rem 2rem;
   background: linear-gradient(135deg, var(--blue), var(--violet));
   color: white;
   text-decoration: none;
-  font-weight: 600;
   border-radius: 8px;
+  font-weight: 600;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(123, 79, 233, 0.4);
+  box-shadow: 0 10px 25px rgba(123, 79, 233, 0.4);
 }
 
-/* ================= FOOTER ================= */
+/* ===================== ACCUEIL ===================== */
+.home {
+  min-height: calc(100vh - 120px); /* hauteur écran - header */
+  display: flex;
+  align-items: center;             /* centre vertical */
+}
 
+.home-content {
+  text-align: left;                /* propre, lisible */
+}
+
+.home h1 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.home p {
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  max-width: 520px;
+}
+
+/* ===================== A PROPOS ===================== */
+.about-page {
+  padding: 6rem 0;
+}
+
+.about-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+
+.about-page h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-intro {
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 4rem;
+}
+
+.about-section {
+  margin-bottom: 4rem;
+}
+
+.about-section h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.about-section p,
+.about-section li {
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.about-section ul {
+  padding-left: 1.2rem;
+}
+
+.about-cta {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+/* ===================== PARCOURS ===================== */
+.parcours-page {
+  padding: 6rem 0;
+}
+
+.parcours-intro {
+  margin-bottom: 5rem;
+}
+
+.parcours-intro h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.parcours-intro p {
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.parcours-section {
+  margin-bottom: 4rem;
+}
+
+.parcours-section h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.parcours-section p {
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+/* ===================== FOOTER ===================== */
 footer {
   text-align: center;
-  padding: 2rem 1rem;
-  font-size: 0.8rem;
-  color: #9ca3af;
+  padding: 2.5rem 1rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
 }
 
-/* =========================
-   TABLETTE (≤ 1024px)
-========================= */
-@media (max-width: 1024px) {
-
-  header {
-    padding: 1.2rem 2rem;
-  }
-
-  nav {
-    gap: 1.2rem;
-  }
-
-  main h1 {
-    font-size: 1.7rem;
-  }
-
-  main p {
-    font-size: 0.95rem;
-  }
-}
-
-/* =========================
-   MOBILE (≤ 767px)
-========================= */
-@media (max-width: 767px) {
-
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 768px) {
   .header-inner {
     flex-direction: column;
     align-items: flex-start;
@@ -157,25 +218,13 @@ footer {
   }
 
   nav {
-    flex-direction: column;
-    gap: 0.6rem;
+    flex-wrap: wrap;
+    gap: 1rem;
   }
 
-  nav a {
-    font-size: 1rem;
-  }
-
-  main {
-    margin-top: 4rem;
-    padding: 0 1rem;
-  }
-
-  main h1 {
-    font-size: 1.5rem;
-  }
-
-  .btn {
-    width: 100%;
-    text-align: center;
+  .home h1,
+  .about-page h1,
+  .parcours-intro h1 {
+    font-size: 1.8rem;
   }
 }
