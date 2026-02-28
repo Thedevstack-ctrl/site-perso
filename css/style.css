@@ -386,3 +386,110 @@ footer {
 .contact-alternative a:hover {
   text-decoration: underline;
 }
+
+/* ================= PROJETS PAGE ================= */
+
+.projet-page {
+  padding: 6rem 0;
+}  
+
+.projet-page h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.projets-intro {
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 4rem;
+  max-width: 700px;
+}
+
+/* ================= CARTE PROJET ================= */
+
+.project-card {
+  background: rgba(17, 24, 39, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.project-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.project-card p {
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+}
+
+.project-card strong {
+  color: var(--text-main);
+}
+
+/* ===================== LISTE ===================== */
+
+.project-list {
+  padding-left: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-list li {
+  margin-bottom: 0.6rem;
+  color: var(--text-muted);
+}
+
+/* ===================== IDENTITÉ PROJET ===================== */
+
+.project-identity {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.project-logo-link {
+  display: inline-block;
+}
+
+.project-logo {
+  width: 90px;
+  height: auto;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.project-logo:hover {
+  transform: scale(1.08);
+  opacity: 0.9;
+}
+
+.project-description {
+  margin-top: 0.9rem;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===================== CTA PROJETS ===================== */
+
+.project-cta {
+  text-align: center;
+  margin-top: 5rem;
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+/* ===================== RESPONSIVE PROJETS ===================== */
+
+@media (max-width: 768px) {
+  .project-card {
+    padding: 1.8rem;
+  }
+
+  .project-card h2 {
+    font-size: 1.3rem;
+  }
+}
