@@ -173,11 +173,52 @@ main {position: relative;
   margin-bottom: 1rem;
 }
 
+.btn-hero {
+  padding: 0.75rem 1.6rem;   /* un peu plus compact */
+  font-size: 0.95rem;        /* légèrement plus petit */
+}
+
 .home p {
   color: var(--text-muted);
   line-height: 1.7;
   margin-bottom: 2rem;
   max-width: 520px;
+}
+
+/* ===================== HOME SECTIONS ===================== */
+
+.hero {
+  margin-bottom: 6rem;
+}
+
+.home-section {
+  margin-top: 5rem;
+}
+
+.home-section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+}
+
+.home-list {
+  padding-left: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.home-list li {
+  margin-bottom: 0.6rem;
+  color: var(--text-muted);
+}
+
+.home-muted {
+  color: var(--text-muted);
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+.home-cta {
+  text-align: center;
+  margin-top: 6rem;
 }
 
 /* ===================== A PROPOS ===================== */
