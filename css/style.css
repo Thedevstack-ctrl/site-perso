@@ -14,7 +14,7 @@
   --bg-dark: #0f172a;
   --bg-dark-2: #111827;
   --text-main: #ffffff;
-  --text-muted: #9ca3af;
+  --text-muted: #b6c0d0;
   --blue-dark: #2f4fb8;
   --violet-dark: #5a34b5;
 }
@@ -41,7 +41,7 @@ body {
 
 /* ===================== CONTAINER CENTRAL ===================== */
 .container {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0 2rem;
 }
@@ -98,9 +98,10 @@ header {
   align-items: center;
 }
 
-nav {
-  display: flex;
-  gap: 1.6rem;
+nav{
+display:flex;
+align-items:center;
+gap:1.6rem;
 }
 
 nav a {
@@ -125,6 +126,32 @@ nav a:hover::after {
   width: 100%;
 }
 
+.discord-btn{
+display:inline-flex;
+align-items:center;
+
+background:#5865F2;
+color:white;
+
+padding:0.45rem 0.9rem;
+border-radius:8px;
+
+font-size:0.85rem;
+font-weight:500;
+text-decoration:none;
+
+transition:transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.discord-btn:hover{
+transform:translateY(-2px);
+box-shadow:0 8px 20px rgba(88,101,242,0.45);
+}
+
+.discord-btn{
+margin-left:0.5rem;
+}
+
 /* ===================== ZONE DE CONTENU ===================== */
 
 main {position: relative;
@@ -144,7 +171,7 @@ main {position: relative;
 .btn {
   display: inline-block;
   padding: 0.9rem 2rem;
-  background: linear-gradient(135deg, var(--blue), var(--violet));
+  background:linear-gradient(135deg,#5865F2,#7b4fe9);
   color: white;
   text-decoration: none;
   border-radius: 8px;
@@ -173,9 +200,49 @@ main {position: relative;
   margin-bottom: 1rem;
 }
 
+.home-section {
+margin-top:6rem;
+}
+
 .btn-hero {
   padding: 0.75rem 1.6rem;   /* un peu plus compact */
   font-size: 0.95rem;        /* légèrement plus petit */
+}
+
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:1.5rem;
+margin-top:2rem;
+}
+
+.skill-card{
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.05);
+padding:1.5rem;
+border-radius:12px;
+}
+
+.project-highlight{
+background:rgba(255,255,255,0.02);
+border:1px solid rgba(255,255,255,0.05);
+padding:2rem;
+border-radius:16px;
+margin-top:1.5rem;
+}
+
+.tech-list{
+display:flex;
+flex-wrap:wrap;
+gap:0.8rem;
+margin-top:1rem;
+}
+
+.tech-list span{
+background:rgba(255,255,255,0.05);
+padding:0.5rem 0.8rem;
+border-radius:6px;
+font-size:0.9rem;
 }
 
 .home p {
@@ -183,6 +250,49 @@ main {position: relative;
   line-height: 1.7;
   margin-bottom: 2rem;
   max-width: 520px;
+}
+
+.skill-card{
+transition:transform 0.2s ease, box-shadow 0.2s ease;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.05);
+padding:1.5rem;
+border-radius:12px;
+}
+
+.skill-card:hover{
+transform:translateY(-5px);
+box-shadow:0 20px 40px rgba(0,0,0,0.4);
+}
+
+.skill-card:hover{
+border-color:rgba(123,79,233,0.4);
+}
+
+.highlight {
+  color: #8ab4ff;
+  font-weight: 600;
+  text-shadow: 0 0 8px rgba(122,162,255,0.4);
+}
+
+.home-cta{
+text-align:center;
+margin-top:6rem;
+}
+
+.cta-text{
+max-width:520px;
+margin:1rem auto 2rem auto;
+color:var(--text-muted);
+line-height:1.7;
+}
+
+h2{
+font-weight:600;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 /* ===================== HOME SECTIONS ===================== */
@@ -533,4 +643,48 @@ footer {
   .project-card h2 {
     font-size: 1.3rem;
   }
+}
+
+.discord-contact-btn{
+display:inline-block;
+
+margin-top:1.2rem;
+
+background:#5865F2;
+color:white;
+
+padding:0.65rem 1.2rem;
+border-radius:8px;
+
+font-size:0.9rem;
+font-weight:500;
+text-decoration:none;
+
+transition:transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.discord-contact-btn{
+display:inline-block;
+
+margin-top:1.2rem;
+
+background:#5865F2;
+color:white !important;
+
+padding:0.7rem 1.3rem;
+border-radius:8px;
+
+font-size:0.9rem;
+font-weight:500;
+
+text-decoration:none !important;
+
+transition:transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.discord-contact-btn:hover{
+transform:translateY(-2px);
+box-shadow:0 10px 25px rgba(88,101,242,0.45);
+
+color:white !important;
 }
