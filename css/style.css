@@ -688,3 +688,20 @@ box-shadow:0 10px 25px rgba(88,101,242,0.45);
 
 color:white !important;
 }
+
+@media (max-width: 768px){
+
+  .skills-grid{
+    grid-template-columns:1fr;
+  }
+
+  main{
+    margin:2rem 1rem;
+    padding:2.5rem 1.5rem;
+  }
+
+  .container{
+    padding:0 1rem;
+  }
+
+}
