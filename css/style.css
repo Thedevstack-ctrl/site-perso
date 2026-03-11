@@ -982,3 +982,13 @@ font-size: 22px;
 .legal-page p {
 margin-top: 10px;
 }
+
+body {
+  opacity: 0;
+  animation: fadePage 0.5s ease forwards;
+}
+
+@keyframes fadePage {
+  from {opacity:0;}
+  to {opacity:1;}
+}
