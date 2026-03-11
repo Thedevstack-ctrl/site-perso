@@ -1,121 +1,173 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | DyyGa</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact – DyyGa</title>
 
-  <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="header-inner">
-      <div class="logo">
-        <a href="index.html">
-        <img src="assets/img/dg-logo.png" alt="DG Logo">
-        </div>
+<header>
+<div class="header-inner">
 
-      <nav>
-        <a href="index.html">Accueil</a>
-        <a href="a-propos.html">À propos</a>
-        <a href="parcours.html">Parcours</a>
-        <a href="projets.html">Projets</a>
-        <a href="contact.html">Contact</a>
-        <a href="https://discord.gg/6b6PHXZA" class="discord-btn" target="_blank">
-                 Discord </a>
-      </nav>
-    </div>
-  </header>
+<div class="logo">
+<a href="index.html">
+<img src="assets/img/dg-logo.png" alt="DG Logo">
+</a>
+</div>
 
-  <!-- CONTENU PRINCIPAL -->
-  <main class="contact-page">
-    <div class="container">
+<nav>
+<a href="index.html">Accueil</a>
+<a href="a-propos.html">À propos</a>
+<a href="parcours.html">Parcours</a>
+<a href="projets.html">Projets</a>
+<a href="contact.html">Contact</a>
 
-      <h1>Me contacter</h1>
+<a href="https://discord.gg/6b6PHXZA" class="discord-btn" target="_blank">
+Discord
+</a>
 
-      <p class="contact-intro">
-        Un projet, une question ou simplement envie d’échanger ?
-        N’hésitez pas à me laisser un message.
-      </p>
+</nav>
+</div>
+</header>
 
-      <!-- FORMULAIRE -->
-      <form class="contact-form" action="https://formspree.io/f/meelvjod" method="post">
+<main class="contact-page">
 
-        <div class="form-group">
-          <label for="name">Nom</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Votre nom"
-            required
-          >
-        </div>
+<div class="container">
 
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="votre@email.com"
-            required
-          >
-        </div>
+<!-- HERO -->
 
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            rows="5"
-            placeholder="Votre message..."
-            required
-          ></textarea>
-        </div>
+<section class="contact-hero">
 
-        <button type="submit" class="btn-primary">
-          Envoyer le message
-        </button>
+<h1>Me contacter</h1>
 
-      </form>
+<p class="contact-intro">
+Un projet, une question ou simplement envie d’échanger ?
+N’hésitez pas à m’envoyer un message.
+</p>
 
-      <p class="contact-note">
-        Je réponds généralement sous 24 à 48h.
-        Les échanges sont simples et sans engagement.
-      </p>
+</section>
 
-      <!-- CONTACT ALTERNATIF -->
-      <div class="contact-alternative">
-        <h2>Autres moyens de contact</h2>
+<!-- FORMULAIRE -->
 
-        <ul>
-          <li>📧 Email : <a href="mailto:dyy.ga27@gmail.com">dyy.ga27@gmail.com</a></li>
-          <li>💬 Discord : DyyGa - Développeur web en construction</li>
-        </ul>
-        <a href="https://discord.gg/6b6PHXZA"
-           class="discord-contact-btn"
-           target="_blank">
-           💬 Me contacter sur Discord
-        </a>
-      </div>
+<section class="contact-section">
 
-      <p class="about-cta">
-        Vous pouvez aussi me contacter par email ou Discord.
-      </p>
+<form class="contact-form" action="https://formspree.io/f/meelvjod" method="post">
 
-    </div>
-  </main>
+<div class="form-group">
+<label for="name">Nom</label>
+<input
+type="text"
+id="name"
+name="name"
+placeholder="Votre nom"
+required>
+</div>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 DyyGa</p>
-  </footer>
+<div class="form-group">
+<label for="email">Email</label>
+<input
+type="email"
+id="email"
+name="email"
+placeholder="votre@email.com"
+required>
+</div>
+
+<div class="form-group">
+<label for="message">Message</label>
+<textarea
+id="message"
+name="message"
+rows="5"
+placeholder="Votre message..."
+required></textarea>
+</div>
+
+<button type="submit" class="btn">
+Envoyer le message
+</button>
+
+</form>
+
+<p class="contact-note">
+Je réponds généralement sous 24 à 48h.
+Les échanges sont simples et sans engagement.
+</p>
+
+</section>
+
+<!-- CONTACT ALTERNATIF -->
+
+<section class="contact-section">
+
+<h2>Autres moyens de contact</h2>
+
+<div class="contact-cards">
+
+<div class="contact-card">
+
+<h3>Email</h3>
+
+<p>
+Vous pouvez aussi me contacter directement par email.
+</p>
+
+<a href="mailto:dyy.ga27@gmail.com">
+dyy.ga27@gmail.com
+</a>
+
+</div>
+
+<div class="contact-card">
+
+<h3>Discord</h3>
+
+<p>
+Discuter rapidement d’un projet ou poser une question.
+</p>
+
+<a
+href="https://discord.gg/6b6PHXZA"
+class="discord-contact-btn"
+target="_blank">
+
+Discuter sur Discord
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="about-cta">
+
+<p>
+Vous pouvez aussi me contacter par email ou Discord.
+</p>
+
+</section>
+
+</div>
+
+</main>
+
+<footer>
+  <p>© 2026 — DyyGa</p>
+
+<div class="footer-links">
+<a href="mentions-legales.html">Mentions légales</a>
+<a href="politique-confidentialite.html">Politique de confidentialité</a>
+<a href="conditions-utilisation.html">Conditions d'utilisation</a>
+</div>
+</footer>
 
 </body>
 </html>
-
-
